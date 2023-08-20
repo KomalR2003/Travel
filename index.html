@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-light bgNav ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="logo"
+                    src="https://cdn.freebiesupply.com/logos/large/2x/explore-india-logo-png-transparent.png"
+                    alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark " href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Servicies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModaLogin">
+                        <a class="nav-link text-dark" href="#">Login</a>
+                    </li>
+                    <!-- login model -->
+                    <div class="modal fade" id="exampleModaLogin" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Login User</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- login form start -->
+                                    <form>
+                                        <div class="row mb-3">
+                                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                            <div class="col-sm-10">
+                                                <input type="email" class="form-control" id="inputEmail3">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                            <div class="col-sm-10">
+                                                <input type="password" class="form-control" id="inputPassword3">
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="row mb-3">
+                                      <div class="col-sm-10 offset-sm-2">
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                          <label class="form-check-label" for="gridCheck1">
+                                            Example checkbox
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div> -->
+                                       
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                                    <button type="button" class="btn btn-secondary">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- login form end -->
+
+                    <li class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModaregister">
+                        <a class="nav-link text-dark" href="#">Register</a>
+                    </li>
+                    <!-- register model -->
+                    <div class="modal fade" id="exampleModaregister" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Register user</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- register form start -->
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="inputEmail4" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="inputEmail4">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword4" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress" class="form-label">Address</label>
+                                            <input type="text" class="form-control" id="inputAddress"
+                                                placeholder="1234 Main St">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress2" class="form-label">Address 2</label>
+                                            <input type="text" class="form-control" id="inputAddress2"
+                                                placeholder="Apartment, studio, or floor">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputCity" class="form-label">City</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputState" class="form-label">State</label>
+                                            <select id="inputState" class="form-select">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="inputZip" class="form-label">Zip</label>
+                                            <input type="text" class="form-control" id="inputZip">
+                                        </div>
+                                        <!-- <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                    Check me out
+                                                </label>
+                                            </div>
+                                        </div> -->
+                                        <!-- <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Sign in</button>
+                                        </div> -->
+                                    </form>
+                                    <!-- register form end -->
+                                </div>
+                                <div class="modal-footer">
+                                    <!-- <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button> -->
+                                    <button type="button" class="btn btn-secondary">Sign In</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar end -->
+
+    <!-- bg image start -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://www.freakouts.com/img/blog/10-best-Treks.jpg" class="d-block w-100 bgImg" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="txth">Explore</h1>
+                    <p class="txtp">Lets go to explore india</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://www.peakadventuretour.com/blog/wp-content/uploads/2014/10/garhwal-himalayas.jpg"
+                    class="d-block w-100 bgImg" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="txth">Adventure</h1>
+                    <p class="txtp">Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://57hours.com/wp-content/uploads/2020/09/Rock-climbing-Canada.jpg"
+                    class="d-block w-100 bgImg" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="txth">Tracking</h1>
+                    <p class="txtp"> India's largest tracking organization</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- bg image end -->
+
+    <p class="h2">Events</p>
+
+    <!-- card start -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://peopleplaces.in/wp-content/uploads/2023/01/cropped-Places-to-visit-in-Saptara.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Saputara</h5>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <a href="#" class="btn btn-primary bgbtn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://i2.wp.com/www.explorenbite.com/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-24-at-4.07.40-PM.jpeg?fit=768%2C1024&ssl=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Polo Forest</h5>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <a href="#" class="btn btn-primary bgbtn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.mistay.in/travel-blog/content/images/2022/11/shreshth-gupta-XbS76mRgMig-unsplash.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kasol</h5>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <a href="#" class="btn btn-primary bgbtn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.alanarnette.com/blog/wp-content/uploads/2023/03/Icefall-Doctors-in-2023.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Himalayas</h5>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <a href="#" class="btn btn-primary bgbtn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- card end -->
+
+    <!-- video start -->
+    <div class="container">
+        <div class="row space">
+            <div class="col-md-12">
+                <iframe style="width: 100%; height: 250px;" src="https://www.youtube.com/embed/tqWWhChc8RA"
+                    title="Motion Tracking in After Effects (Easy)" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- video end -->
+
+    <p class="h2">stories</p>
+    <!-- card start -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/06/12/06/people-2591874_640.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Solo travelling with explore india.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2020/12/09/00/08/human-5815851_1280.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">A day in kasoli.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/02/26/11/57/mountaineer-2100050_1280.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Wonderful tracking experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- card end -->
+
+    <!-- about card start -->
+    <div class="container">
+        <div class="row space">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://cdn.pixabay.com/photo/2017/10/28/07/47/woman-2896389_1280.jpg"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">About Us</h5>
+                            <p class="card-text">Established in 2006, Explore India. is a full service
+                                travel, tour operator and destination management company which offers a wide array of
+                                services to cater the needs of travel connoisseurs.. <br>We put forward unique
+                                solutions, paying careful attention to each client’s individual needs – to deliver
+                                successful and memorable destination management service that is reliable, safe,
+                                affordable and enjoyable for all clients. </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact form start -->
+    <div class="container">
+        <div class="row space">
+            <div class="col-md-6">
+                <!-- accordion start -->
+
+                <p class="h2">Why people love travel</p>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Explore india
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until
+                                the collapse
+                                plugin adds the appropriate classes that we use to style each element. These classes
+                                control the
+                                overall appearance, as well as the showing and hiding via CSS transitions. You can
+                                modify any of
+                                this with custom CSS or overriding our default variables. It's also worth noting that
+                                just about any
+                                HTML can go within the <code>.accordion-body</code>, though the transition does limit
+                                overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Wonderfull experience of tracking
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                until the
+                                collapse plugin adds the appropriate classes that we use to style each element. These
+                                classes
+                                control the overall appearance, as well as the showing and hiding via CSS transitions.
+                                You can
+                                modify any of this with custom CSS or overriding our default variables. It's also worth
+                                noting that
+                                just about any HTML can go within the <code>.accordion-body</code>, though the
+                                transition does limit
+                                overflow.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- accordion end -->
+            <div class="col-md-6 cont">
+                <p class="h2">Contact Us</p>
+                <form class="row g-3">
+                    <div class="col-md-12">
+                        <label for="inputname" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="inputname">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="inputMsg" class="form-label">Message</label>
+                        <input type="text" class="form-control" id="inputMsg">
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary bg-secondary conbtn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- contact form end -->
+
+    <p class="h2">Facilities</p>
+
+    <!-- card start -->
+    <div class="container">
+        <div class="row space">
+            <div class="card-group">
+                <div class="card space">
+                    <!-- animation -->
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://lottie.host/90a85649-4f1a-4a9e-841c-a1cf7e6b9213/tX342GmsNC.json"
+                        background="#FFFFFF" speed="1" style="width: 300px; height: 300px" loop controls autoplay
+                        direction="1" mode="normal"></lottie-player>
+                    <div class="card-body">
+                        <h5 class="card-title animtxt">Transport</h5>
+                        <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://lottie.host/c3e33dc4-ff84-4c98-a637-2a932a6128ba/D4gOfFgUwz.json"
+                        background="#FFFFFF" speed="1" style="width: 300px; height: 300px" loop controls autoplay
+                        direction="1" mode="normal"></lottie-player>
+                    <div class="card-body">
+                        <h5 class="card-title animtxt">Stay</h5>
+                        <!-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://lottie.host/8503a1ad-49c9-4166-b22f-6d32798cb614/v9s772AkKZ.json"
+                        background="#ffffff" speed="1" style="width: 300px; height: 300px" loop controls autoplay
+                        direction="1" mode="normal"></lottie-player>
+                    <div class="card-body">
+                        <h5 class="card-title animtxt">Food</h5>
+                        <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- card end -->
+
+    <!-- map start -->
+    <div class="container">
+        <div class="row">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14688.087585962867!2d72.550212393872!3d23.022968230183103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f04c6a8041%3A0x550796bc4eb79a55!2sTanishq%20Jewellery%20-%20Ahmedabad%20-%20CG%20Road!5e0!3m2!1sen!2sin!4v1690534672299!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!-- map end -->
+
+    <!-- footer start -->
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container-fluid my-5">
+        <div class="row footer">
+            <footer class="text-white text-center text-lg-start">
+                <!-- Grid container -->
+                <div class="container p-4">
+                    <!--Grid row-->
+                    <div class="row mt-4">
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                            <h5 class="text-uppercase mb-4">About company</h5>
+
+                            <p>
+                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                                voluptatum deleniti atque corrupti.
+                            </p>
+
+                            <p>
+                                Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+                                molestias.
+                            </p>
+
+                            <!-- <div class="mt-4"> -->
+                            <!-- Facebook -->
+                            <!-- <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-facebook-f"></i></a> -->
+                            <!-- Dribbble -->
+                            <!-- <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-dribbble"></i></a> -->
+                            <!-- Twitter -->
+                            <!-- <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-twitter"></i></a> -->
+                            <!-- Google + -->
+                            <!-- <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-google-plus-g"></i></a> -->
+                            <!-- Linkedin -->
+                            <!-- </div> -->
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase mb-4 pb-1">Search something</h5>
+
+                            <div class="form-outline form-white mb-4">
+                                <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                                <label class="form-label" for="formControlLg">Search</label>
+                            </div>
+
+                            <ul class="fa-ul" style="margin-left: 1.65em;">
+                                <li class="mb-3">
+                                    <span class="fa-li"><i class="fas fa-home"></i></span><span
+                                        class="ms-2">Ahmedabad</span>
+                                </li>
+                                <li class="mb-3">
+                                    <span class="fa-li"><i class="fas fa-envelope"></i></span><span
+                                        class="ms-2">explore@.com</span>
+                                </li>
+                                <li class="mb-3">
+                                    <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 01 234
+                                        567 88</span>
+                                </li>
+                                <li class="mb-3">
+                                    <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+ 01 234
+                                        567 89</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase mb-4">Opening hours</h5>
+
+                            <table class="table text-center text-white">
+                                <tbody class="font-weight-normal">
+                                    <tr>
+                                        <td>Mon - Thu:</td>
+                                        <td>8am - 9pm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fri - Sat:</td>
+                                        <td>8am - 1am</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sunday:</td>
+                                        <td>9am - 10pm</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Grid container -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2021 Copyright:
+                    <a class="text-white" href="https://mdbootstrap.com/">ExploreIndia.com</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+        </div>
+    </div>
+    <!-- End of .container -->
+
+    <!-- footer end -->
+
+
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
